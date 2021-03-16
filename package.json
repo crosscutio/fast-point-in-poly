@@ -1,0 +1,77 @@
+{
+  "name": "fast-point-in-poly",
+  "version": "1.0.0",
+  "description": "Quickly find points in large sets of polygons",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "test": "jest",
+    "lint": "eslint '**/*.js'"
+  },
+  "author": "Crosscut",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "husky": "4.3.*",
+    "lint-staged": "10.5.*",
+    "jest": "26.6.*",
+    "@mapbox/eslint-config-mapbox": "^3.0.0",
+    "eslint": "^7.3.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-jest": "^24.1.0"
+  },
+  "eslintConfig": {
+    "extends": "@mapbox/eslint-config-mapbox",
+    "env": {
+      "jest/globals": true
+    },
+    "plugins": [
+      "jest"
+    ],
+    "rules": {
+      "quotes": [
+        "error",
+        "double"
+      ],
+      "comma-dangle": [
+        "off"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown",
+    "**/*.js": "eslint"
+  },
+  "jest": {
+    "clearMocks": true,
+    "coverageDirectory": "coverage",
+    "coverageProvider": "babel",
+    "coverageReporters": [
+      "html",
+      "text"
+    ],
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/*.test.js"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "collectCoverage": true
+  },
+  "dependencies": {
+    "@turf/boolean-point-in-polygon": "^6.3.0",
+    "@turf/center-of-mass": "^6.3.0",
+    "geokdbush": "^1.1.0",
+    "kdbush": "^3.0.0"
+  }
+}
