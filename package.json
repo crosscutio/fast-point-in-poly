@@ -72,5 +72,18 @@
     "@turf/center-of-mass": "^6.3.0",
     "geokdbush": "^1.1.0",
     "kdbush": "^3.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crosscutio/fast-point-in-poly.git"
+  },
+  "keywords": [
+    "geojson",
+    "point",
+    "polygon"
+  ],
+  "bugs": {
+    "url": "https://github.com/crosscutio/fast-point-in-poly/issues"
+  },
+  "homepage": "https://github.com/crosscutio/fast-point-in-poly#readme"
 }
