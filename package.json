@@ -10,7 +10,6 @@
   },
   "author": "Crosscut",
   "license": "MIT",
-  "private": true,
   "devDependencies": {
     "prettier": "^2.2.1",
     "husky": "4.3.*",
